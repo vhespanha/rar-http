@@ -1,22 +1,20 @@
 {
-  "name": "rar-http",
-  "version": "1.0.0",
-  "description": "A module to stream the contents of RAR archives through a HTTP server",
-  "main": "./src/index.js",
-  "scripts": {
-    "start": "node ./src/server.js"
-  },
-  "dependencies": {
-    "request": "2.88.0",
-    "router": "^1.3.1",
-    "rar-stream": "Stremio/rar-stream#29cdd8ad56ce72ad36ded050723446ac52df69eb",
-    "mime": "1.3.6",
-    "body-parser": "1.19.0",
-    "safe-stateless-regex": "https://github.com/Stremio/safe-stateless-regex#67403213aaee9777fe6f97bde1b9264ca0ee381f",
-    "named-queue": "2.2.1",
-    "needle": "2.4.0"
-  },
-  "devDependencies": {
-    "express": "4.17.1"
-  }
+	"name": "rar-http",
+	"version": "1.0.0",
+	"description": "A module to stream the contents of RAR archives through a HTTP server",
+	"main": "./src/index.js",
+	"scripts": {
+		"format": "npx prettier . -w --log-level silent"
+	},
+	"dependencies": {
+		"body-parser": "1.19.0",
+		"lz-string": "1.5.0",
+		"mime": "1.3.6",
+		"named-queue": "2.2.1",
+		"needle": "2.4.0",
+		"rar-stream": "Stremio/rar-stream#29cdd8ad56ce72ad36ded050723446ac52df69eb",
+		"request": "2.88.0",
+		"router": "^1.3.1",
+		"safe-stateless-regex": "https://github.com/vhespanha/safe-stateless-regex"
+	}
 }

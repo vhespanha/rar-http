@@ -10,17 +10,15 @@ module.exports = {
 		return store.set(rarUrls)
 	},
 	file: async (key, opts) => {
-		if (!key)
-			throw Error('Missing "key"')
-		const file = await getRarStream({
+		if (!key) throw Error('Missing "key"')
+		return await getRarStream({
 			// we use the key for the url as this
 			// is only used as an ID for the stream
 			url: key,
 			query: {
 				o: JSON.stringify(opts || {}),
-				key,
+				key
 			}
 		})
-		return file
 	}
 }
